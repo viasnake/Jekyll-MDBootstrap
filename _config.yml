@@ -1,0 +1,5 @@
+baseurl: "/"
+url: "https://wiki.mcplay.biz"
+# Build settings
+markdown: kramdown
+theme: MCPlayNetwork
