@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+{% include head.html %}
+
+<body class="grey lighten-3" id="page-top">
+    {% include header.html %}
+    <main class="mt-5 pt-5">
+        <div class="container">
+            <section class="mt-4">
+                {% if page.markdown %}
+                <div class="card mb-4 wow fadeIn">
+                    <div class="card-body">
+                        {{content}}
+                    </div>
+                </div>
+                {% else %}
+                {{content}}
+                {% endif %}
+            </section>
+        </div>
+
+    </main>
+    {% include footer.html %}
+
+    <script type="text/javascript" src="/assets/js/jquery-3.4.0.min.js"></script>
+    <script type="text/javascript" src="/assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/js/mdb.min.js"></script>
+</body>
+
+</html>
