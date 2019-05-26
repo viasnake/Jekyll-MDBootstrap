@@ -1,6 +1,6 @@
 name: Jekyll-MDBootstrap
 baseurl: ""
-url: ""
+url: "https://snake0053.github.io/Jekyll-MDBootstrap/"
 # Build settings
 markdown: kramdown
 
