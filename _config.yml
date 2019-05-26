@@ -1,5 +1,5 @@
-baseurl: "/"
-url: "https://wiki.mcplay.biz"
+baseurl: ""
+url: ""
 # Build settings
 markdown: kramdown
-theme: MCPlayNetwork
+theme: Jekyll-MDBootstrap
