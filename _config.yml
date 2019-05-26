@@ -4,6 +4,12 @@ url: ""
 # Build settings
 markdown: kramdown
 
+social:
+  Website: https://snake0053.xyz/
+  Twitter: https://twitter.com/snake0053
+  YouTube: /#
+  GitHub: https://github.com/snake0053/Jekyll-MDBootstrap
+
 nav:
   - title: Home
     url: /

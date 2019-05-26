@@ -12,19 +12,19 @@
   <hr class="my-4">
 
   <div class="pb-4">
-    <a href="https://twitter.com/MCPlayNetwork" target="_blank">
+    <a href="{{site.social.Twitter}}" target="_blank">
       <i class="fab fa-twitter mr-3"></i>
     </a>
-    <a href="https://www.youtube.com/channel/UCCw30ZfwDq_czxcTofr_4LA" target="_blank">
+    <a href="{{site.social.YouTube}}" target="_blank">
       <i class="fab fa-youtube mr-3"></i>
     </a>
-    <a href="https://github.com/GravittoGroup/MCPlayNetwork-wiki" target="_blank">
+    <a href="{{site.social.GitHub}}" target="_blank">
       <i class="fab fa-github mr-3"></i>
     </a>
   </div>
 
   <div class="footer-copyright py-3">
-    &copy; 2011-2019, <a href="https://www.mcplay.biz" target="_blank">MCPlayNetwork</a>. All Rights Reserved.
+      &copy; {{ site.time | date:'%Y' }}, <a href="{{site.social.url}}" target="_blank">{{site.name}}</a>. All Rights Reserved.
   </div>
 
 </footer>
