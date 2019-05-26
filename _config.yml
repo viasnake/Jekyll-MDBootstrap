@@ -1,5 +1,5 @@
+name: Jekyll-MDBootstrap
 baseurl: ""
 url: ""
 # Build settings
 markdown: kramdown
-theme: Jekyll-MDBootstrap
