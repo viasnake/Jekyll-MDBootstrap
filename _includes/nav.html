@@ -1,51 +1,50 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand waves-effect" href="https://wiki.mcplay.biz/" target="_blank">
-      <strong class="blue-text">{{site.name}}</strong>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <!-- Left -->
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link waves-effect" href="#">Home
-            <span class="sr-only">(current)</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link waves-effect" href="https://mdbootstrap.com/docs/jquery/" target="_blank">About MDB</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link waves-effect" href="https://mdbootstrap.com/docs/jquery/getting-started/download/"
-            target="_blank">Free download</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link waves-effect" href="https://mdbootstrap.com/education/bootstrap/" target="_blank">Free
-            tutorials</a>
-        </li>
-      </ul>
-      <!-- Right -->
-      <ul class="navbar-nav nav-flex-icons">
-        <li class="nav-item">
-          <a href="https://www.mcplay.biz/" class="nav-link waves-effect" target="_blank">
-            <i class="fas fa-home"></i>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="https://community.mcplay.biz/" class="nav-link waves-effect" target="_blank">
-            <i class="fas fa-users"></i>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="https://github.com/gravittogroup/"
-            class="nav-link border border-light rounded waves-effect" target="_blank">
-            <i class="fab fa-github mr-2"></i>GitHub
-          </a>
-        </li>
-      </ul>
-    </div>
+  <a class="navbar-brand" href="https://www.mcplay.biz/" target="_blank">{{site.name}}</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <!-- Left -->
+    <ul class="navbar-nav mr-auto">
+      {% for item in site.nav %}
+      {% if item.dropdown %}
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">{{ item.title }}</a>
+        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+          {% for dropdownitem in item.dropdown %}
+          <a class="dropdown-item" href="{{ dropdownitem.url }}">{{ dropdownitem.title }}</a>
+          {% endfor %}
+        </div>
+      </li>
+      {% else %}
+      <li class="nav-item {% if page.title == item.title %}active{% endif %}">
+        <a class="nav-link" href="{{ item.url }}">{{ item.title }}{% if page.title == item.title %}<span
+            class="sr-only">(current)</span>{% endif %}
+        </a>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+    <!-- Right -->
+    <ul class="navbar-nav nav-flex-icons">
+      <li class="nav-item">
+        <a href="https://www.mcplay.biz/" class="nav-link waves-effect" target="_blank">
+          <i class="fas fa-home"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="https://community.mcplay.biz/" class="nav-link waves-effect" target="_blank">
+          <i class="fas fa-users"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="https://github.com/gravittogroup/" class="nav-link border border-light rounded waves-effect"
+          target="_blank">
+          <i class="fab fa-github mr-2"></i>GitHub
+        </a>
+      </li>
+    </ul>
   </div>
 </nav>
