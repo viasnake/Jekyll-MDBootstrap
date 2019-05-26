@@ -3,3 +3,17 @@ baseurl: ""
 url: ""
 # Build settings
 markdown: kramdown
+
+nav:
+  - title: Home
+    url: /
+  - title: item 1
+    dropdown:
+      - title: item 1
+        url: /#
+      - title: item 2
+        url: /#
+      - title: item 3
+        url: /#
+      - title: item 4
+        url: /#
